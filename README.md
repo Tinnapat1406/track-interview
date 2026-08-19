@@ -36,4 +36,30 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 ## Architecture
- 
+
+ tech-interview-timeline-tracker/
+│
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx              
+│   ├── candidates/
+│   │   ├── page.tsx          
+│   │   └── [id]/
+│   │       └── page.tsx      
+│   ├── interviews/
+│   │   └── page.tsx
+│   └── api/
+│
+├── components/
+│   ├── CandidateCard.tsx
+│   ├── Timeline.tsx
+│   ├── StatusBadge.tsx
+│   └── Navbar.tsx
+│
+├── lib/
+│
+├── types/
+│
+├── public/
+│
+└── package.json
