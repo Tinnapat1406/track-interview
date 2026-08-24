@@ -8,11 +8,15 @@ export default function candidate() {
                 Candidates
             </h1>
 
-            <Link href="/candidate/id">
+            <Link href="/dashboard" className="flex items-start mt-4">
                 <p className="font-semibold text-lg text-left leading-10 tracking-tight text-black dark:text-zinc-50">
-                    Candidate Identity
+                    Back to Dashboard
                 </p>
             </Link>
+
+            <div className = "text-lg font-semibold text-center leading-10 tracking-tight text-black dark:text-zinc-50">
+                list of candidates 
+            </div>
         </div>
     )
 }
