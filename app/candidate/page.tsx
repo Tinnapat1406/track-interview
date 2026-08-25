@@ -1,5 +1,14 @@
 import Link from "next/link";
+import React from "react";  
+import data from './data.json';
 
+
+interface Candidate {
+    id: number;
+    name: string;
+}
+
+const candidates: Candidate[] = data.candidates;
 
 export default function candidate() {
     return(
@@ -16,6 +25,13 @@ export default function candidate() {
 
             <div className = "text-lg font-semibold text-center leading-10 tracking-tight text-black dark:text-zinc-50">
                 list of candidates 
+                <ul>
+                    {candidates.map((candidate) => (
+                        <li key = {candidate.id} className = "text-lg font-semibold text-start leading-10 tracking-tight text-black dark:text-zinc-50">
+                            {candidate.name}
+                        </li>
+                    ))}
+                </ul>
             </div>
         </div>
     )
