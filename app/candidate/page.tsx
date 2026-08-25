@@ -33,7 +33,6 @@ export default function candidate() {
                 <h2 className = "text-2xl font-bold text-center mb-6 text-black dark:text-zinc-50 tracking-tight">
                     list of candidates
                 </h2>
-
                 <div className = "grid grid-cols-1 md:grid-cols-2 gap-4">
                     <ul>
                     {candidates.map((candidate) => (
@@ -50,7 +49,6 @@ export default function candidate() {
                                 Applied on: {candidate.applied} <br/>
                             </li>
                         </div>
-                        
                          ))}
                      </ul>
                 </div>
