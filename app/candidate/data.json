@@ -1,6 +1,6 @@
 {
 "candidates": [
-{ "id": 1, "name": "Alice" },
-{ "id": 2, "name": "Bob" }
+{ "id": 1, "name": "Alice","position": "Software Engineer","applied": "2023-01-01" },
+{ "id": 2, "name": "Bob","position": "Product Manager","applied": "2023-01-02" }
 ]
 }
