@@ -47,16 +47,34 @@ export default function Home() {
           </nav>
         </div>
 
+        <details open className="group w-full">
+          <summary className="flex cursor-pointer list-none items-center gap-3 py-4">
+            <h2 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
+              Upcoming Interviews
+            </h2>
+            <span className="rounded-full bg-black/5 px-2 py-0.5 text-sm font-medium text-black/60 dark:bg-white/10 dark:text-white/60">
+              {candidates.length}
+            </span>
+            <svg
+              className="h-5 w-5 text-black/40 transition-transform group-open:rotate-180 dark:text-white/40"
+              viewBox="0 0 20 20"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              aria-hidden="true">
+              <path d="M5 7.5 10 12.5 15 7.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </summary>
+
         <div className="flex flex-col items-start gap-3 text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50 py-4">
-             Upcoming Interviews
-          </h1>
-          {candidates.map((candidate: any) => (
-            <div className="mt-4 w-full" key={candidate.id}>
-              <Candidate candidate={candidate} />
-            </div>
-          ))}
+           {candidates.map((candidate: any) => (
+        <div className="mt-4 w-full" key={candidate.id}>
+         <Candidate candidate={candidate} />
+       </div>
+       ))}
         </div>
+    </details>
+
 
         <div className="flex flex-col items-start gap-3 text-left">
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
