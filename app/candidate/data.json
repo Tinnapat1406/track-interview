@@ -1,9 +1,9 @@
 {
 "candidates": [
-{ "id": 1, "name": "Alice","position": "Software Engineer","applied": "2023-01-01" },
-{ "id": 2, "name": "Bob","position": "Product Manager","applied": "2023-01-02" },
-{ "id": 3, "name": "Charlie","position": "Data Scientist","applied": "2023-01-03" },
-{ "id": 4, "name": "David","position": "UX Designer","applied": "2023-01-04" },
-{ "id": 5, "name": "Eve","position": "DevOps Engineer","applied": "2023-01-05" }
+{ "id": 1, "name": "Alice","position": "Software Engineer","applied": "2023-01-01","status": "interviewing" },
+{ "id": 2, "name": "Bob","position": "Product Manager","applied": "2023-01-02","status": "pending" },
+{ "id": 3, "name": "Charlie","position": "Data Scientist","applied": "2023-01-03","status": "completed" },
+{ "id": 4, "name": "David","position": "UX Designer","applied": "2023-01-04","status": "rejected" },
+{ "id": 5, "name": "Eve","position": "DevOps Engineer","applied": "2023-01-05","status": "pending" }
 ]
 }
