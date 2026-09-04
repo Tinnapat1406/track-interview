@@ -21,7 +21,8 @@ export default function Home() {
         backgroundColor: 'rgba(255, 255, 255, 0.75)',
         backdropFilter: 'blur(10px)',
         border: '1px solid rgba(255, 255, 255, 0.25)',
-        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.05)'
+        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.05)',
+        lineHeight: '1.8'
       }}>
         <div className ="item-center justify-center"
         style ={{
@@ -50,7 +51,8 @@ export default function Home() {
               backgroundColor: 'rgba(255, 255, 255, 0.75)',
               backdropFilter: 'blur(10px)',
               border: '1px solid rgba(255, 255, 255, 0.25)',
-              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.05)'
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.05)',
+              lineHeight: '1.8'
               }}>
           <div className ="item-center justify-center"
             style ={{
