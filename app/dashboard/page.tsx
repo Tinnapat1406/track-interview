@@ -26,7 +26,7 @@ export default function Home() {
       <main className="text-left flex flex-1 w-full max-w-3xl flex-col items-start justify-between py-12 px-16 bg-white dark:bg-black">
        
         <div className="w-full">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50 py-4">
+          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50 p ">
              Overview
           </h1>
 
