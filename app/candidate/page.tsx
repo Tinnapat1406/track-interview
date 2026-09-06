@@ -19,22 +19,31 @@ export default async function Candidates() {
                         </p>
                     </div>
 
-                    <Link
-                        href="/dashboard"
-                        className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
-                    >
-                        <svg
-                            className="h-4 w-4"
-                            viewBox="0 0 20 20"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            aria-hidden="true"
+                    <div className="flex items-center gap-3">
+                        <Link
+                            href="/dashboard"
+                            className="inline-flex items-center gap-2 rounded-lg border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800"
                         >
-                            <path d="M12 5 7 10l5 5" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                        Back to Dashboard
-                    </Link>
+                            <svg
+                                className="h-4 w-4"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                aria-hidden="true"
+                            >
+                                <path d="M12 5 7 10l5 5" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                            Back to Dashboard
+                        </Link>
+
+                        <Link
+                            href="/candidate/new"
+                            className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+                        >
+                            Add New Profile
+                        </Link>
+                    </div>
                 </div>
 
                 <ul className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">

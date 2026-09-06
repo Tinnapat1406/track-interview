@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import Candidate from "../../component/candidate";
-import candidateData from "../candidate/data.json";
+import { getCandidates } from "../candidate/candidates";
 
 
-export default function Home() {
-  const candidates = candidateData?.candidates ?? [];
+export default async function Home() {
+  const candidates = await getCandidates();
 
   const countBy = (status: string) =>
     candidates.filter((c) => c.status === status).length;
