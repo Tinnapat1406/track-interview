@@ -47,8 +47,8 @@ export default function Navbar(){
 
             {/*Right Side*/}
             <div className="ml-auto flex items-center gap-2">
-                <Link href="/interview" className="hidden rounded-md bg-foreground px-3 py-2 text-sm font-medium text-background transition-opacity hover:opacity-90 sm:inline-block">
-                    New Interview
+                <Link href="/candidate/new" className="hidden rounded-md bg-foreground px-3 py-2 text-sm font-medium text-background transition-opacity hover:opacity-90 sm:inline-block">
+                    Add New Profile
                 </Link>
 
             {/* Mobile toggle */}

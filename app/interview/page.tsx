@@ -1,18 +1,10 @@
 import Link from "next/link";
 import StatusBadge, { STATUSES, statusLabels } from "../../component/status";
-import data from "../candidate/data.json";
+import { getCandidates } from "../candidate/candidates";
 
-interface Candidate {
-    id: number;
-    name: string;
-    position: string;
-    applied: string;
-    status: string;
-}
+export default async function Interview() {
+    const candidates = await getCandidates();
 
-const candidates: Candidate[] = data.candidates;
-
-export default function Interview() {
     const groups = STATUSES.map((status) => ({
         status,
         items: candidates.filter((c) => c.status === status),

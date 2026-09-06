@@ -1,19 +1,10 @@
 import Link from "next/link";
 import StatusBadge from "../../component/status";
-import data from './data.json';
+import { getCandidates } from "./candidates";
 
+export default async function Candidates() {
+    const candidates = await getCandidates();
 
-interface Candidate {
-    id: number;
-    name: string;
-    position: string;
-    applied : string;
-    status: string;
-}
-
-const candidates: Candidate[] = data.candidates;
-
-export default function Candidates() {
     return (
         <div className="flex flex-1 flex-col items-center bg-zinc-50 font-sans dark:bg-black">
             <main className="w-full max-w-4xl px-6 py-12 sm:px-16">
