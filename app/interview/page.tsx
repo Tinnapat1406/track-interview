@@ -2,6 +2,8 @@ import Link from "next/link";
 import { STATUSES, statusLabels } from "../../component/status";
 import StatusSelect from "../../component/status-select";
 import { getCandidates } from "../candidate/candidates";
+import DeleteButton from "../../component/delete-button";
+
 
 export default async function Interview() {
     const candidates = await getCandidates();
@@ -72,7 +74,11 @@ export default async function Interview() {
                                             Applied {candidate.applied}
                                         </span>
 
-                                        <StatusSelect id={candidate.id} status={candidate.status} />
+                                        <StatusSelect id={candidate.id} name={candidate.name} status={candidate.status} />
+
+                                            {candidate.status === "completed" && (
+                                                <DeleteButton id={candidate.id} name={candidate.name} />
+                        )}
 
                                     </li>
                                 ))}
