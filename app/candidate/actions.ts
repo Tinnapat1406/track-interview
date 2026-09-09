@@ -3,7 +3,10 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { STATUSES } from "../../component/status";
-import { addCandidate } from "./candidates";
+import {
+	addCandidate,
+	updateCandidateStatus as writeCandidateStatus,
+} from "./candidates";
 
 export type FormState = { error?: string };
 
@@ -39,7 +42,7 @@ export async function updateCandidateStatus(
 	if(!(STATUSES as readonly string[]).includes(status)){
 		throw new Error(`Invalid status: ${status}`);
 	}
-	await updateCandidateStatus(id,status);
+	await writeCandidateStatus(id,status);
 	revalidatePath("/dashboard");
 	revalidatePath("/candidate");
 	revalidatePath("/interview");
