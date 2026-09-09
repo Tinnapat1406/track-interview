@@ -51,3 +51,19 @@ export async function updateCandidateStatus(
 
 	return updated.find((c) => c.id === id) || null;
 }
+
+export async function deleteCandidate(
+	id:number
+): Promise<boolean>{
+	const candidates = await getCandidates();
+	const remaining = candidates.filter((c) => c.id !== id);
+	if(remaining.length === candidates.length) return false;
+
+	await fs.writeFile(
+		dataFile,
+		JSON.stringify({ candidates: remaining }, null, 2) + "\n",
+		"utf-8"
+	);
+
+	return true;
+}
