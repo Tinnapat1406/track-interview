@@ -31,3 +31,16 @@ export async function createCandidate(
 
 	redirect("/candidate");
 }
+
+export async function updateCandidateStatus(
+	id: number,
+	status: string,
+){
+	if(!(STATUSES as readonly string[]).includes(status)){
+		throw new Error(`Invalid status: ${status}`);
+	}
+	await updateCandidateStatus(id,status);
+	revalidatePath("/dashboard");
+	revalidatePath("/candidate");
+	revalidatePath("/interview");
+}
