@@ -5,8 +5,12 @@ import { redirect } from "next/navigation";
 import { STATUSES } from "../../component/status";
 import {
 	addCandidate,
+	deleteCandidate,
+	getCandidates,
 	updateCandidateStatus as writeCandidateStatus,
 } from "./candidates";
+
+
 
 export type FormState = { error?: string };
 
@@ -46,4 +50,21 @@ export async function updateCandidateStatus(
 	revalidatePath("/dashboard");
 	revalidatePath("/candidate");
 	revalidatePath("/interview");
+
+	const candidates = await getCandidates();
+	const current = candidates.find((c) => c.id === id);
+	if (!current) throw new Error(`Candidate not found: ${id}`);
+	if (current.status === "completed") {
+		throw new Error(`Completed candidates cannot be updated: ${id}`);
+	}
 }
+
+export async function deleteCandidate(id: number) {
+	const removed = await deleteCandidate(id);
+	if (!removed) throw new Error(`Candidate not found: ${id}`);
+
+	revalidatePath("/dashboard");
+	revalidatePath("/candidate");
+	revalidatePath("/interview");
+}
+
