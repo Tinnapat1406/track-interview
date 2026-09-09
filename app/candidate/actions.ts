@@ -59,7 +59,7 @@ export async function updateCandidateStatus(
 	}
 }
 
-export async function deleteCandidate(id: number) {
+export async function deleteCandidateProfile(id: number) {
 	const removed = await deleteCandidate(id);
 	if (!removed) throw new Error(`Candidate not found: ${id}`);
 
