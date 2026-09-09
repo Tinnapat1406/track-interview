@@ -1,5 +1,6 @@
 import Link from "next/link";
-import StatusBadge, { STATUSES, statusLabels } from "../../component/status";
+import { STATUSES, statusLabels } from "../../component/status";
+import StatusSelect from "../../component/status-select";
 import { getCandidates } from "../candidate/candidates";
 
 export default async function Interview() {
@@ -71,7 +72,8 @@ export default async function Interview() {
                                             Applied {candidate.applied}
                                         </span>
 
-                                        <StatusBadge status={candidate.status} />
+                                        <StatusSelect id={candidate.id} status={candidate.status} />
+
                                     </li>
                                 ))}
                             </ul>
